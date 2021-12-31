@@ -18,10 +18,7 @@ let My_stars = 0
 music.setTempo(145)
 music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
 proportionalFont.showString("Count stars!     ", 75)
-basic.forever(function () {
-    radio.setGroup(group % 10)
-})
-loops.everyInterval(100, function () {
+loops.everyInterval(50, function () {
     if (randint(0, 10) == 0) {
         radio.sendString("stars")
         My_stars += 1
@@ -29,4 +26,7 @@ loops.everyInterval(100, function () {
     }
     strip.shift(1)
     strip.show()
+})
+basic.forever(function () {
+    radio.setGroup(group % 10)
 })
