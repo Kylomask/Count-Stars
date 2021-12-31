@@ -13,7 +13,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
 let group = 0
 let Total = 0
 let strip: neopixel.Strip = null
-strip = neopixel.create(DigitalPin.P0, 200, NeoPixelMode.RGB)
+strip = neopixel.create(DigitalPin.P0, 500, NeoPixelMode.RGB)
 let My_stars = 0
 music.setTempo(145)
 music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
