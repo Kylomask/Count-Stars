@@ -5,7 +5,6 @@ radio.onReceivedString(function (receivedString) {
     }
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    music.startMelody(music.builtInMelody(Melodies.JumpUp), MelodyOptions.Once)
     group += 1
     basic.showNumber(group % 10)
     basic.clearScreen()
@@ -15,8 +14,6 @@ let Total = 0
 let strip: neopixel.Strip = null
 strip = neopixel.create(DigitalPin.P0, 500, NeoPixelMode.RGB)
 let My_stars = 0
-music.setTempo(145)
-music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
 proportionalFont.showString("Count stars!     ", 75)
 loops.everyInterval(50, function () {
     if (randint(0, 10) == 0) {
