@@ -7,7 +7,8 @@
         "microphone": "*",
         "neopixel": "github:Microsoft/pxt-neopixel#v0.7.3",
         "WhaleySansFont": "github:makecode-extensions/whaleysansfont#v1.1.0",
-        "pxt-proportional-font": "github:lwchkg/pxt-proportional-font#v1.0.2"
+        "pxt-proportional-font": "github:lwchkg/pxt-proportional-font#v1.0.2",
+        "microturtle": "github:Microsoft/pxt-microturtle#v0.0.9"
     },
     "files": [
         "main.blocks",
@@ -19,7 +20,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "4.0.16",
+        "target": "4.0.17",
         "targetId": "microbit"
     },
     "supportedTargets": [

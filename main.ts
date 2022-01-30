@@ -10,6 +10,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showNumber(group % 10)
     basic.clearScreen()
 })
+let rand = 0
 let group = 0
 let Total = 0
 let strip: neopixel.Strip = null
@@ -20,6 +21,21 @@ music.startMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
 proportionalFont.showString("Count stars!     ", 75)
 basic.forever(function () {
     radio.setGroup(group % 10)
+})
+basic.forever(function () {
+    turtle.setSpeed(50)
+    turtle.pen(TurtlePenMode.Down)
+    rand = randint(0, 2)
+    turtle.setBrightness(randint(0, 255))
+    if (rand == 0) {
+        turtle.turnRight()
+        turtle.forward(1)
+    } else if (rand == 1) {
+        turtle.turnLeft()
+        turtle.forward(1)
+    } else {
+        turtle.forward(1)
+    }
 })
 loops.everyInterval(100, function () {
     if (randint(0, 10) == 0) {
